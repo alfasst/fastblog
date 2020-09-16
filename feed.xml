@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://alfasst.github.io/fastblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alfasst.github.io/fastblog/" rel="alternate" type="text/html" /><updated>2020-09-16T11:51:06-05:00</updated><id>https://alfasst.github.io/fastblog/feed.xml</id><title type="html">fastposts</title><subtitle>Powered by fastpages</subtitle><entry><title type="html">One Jupyter - Three Languages</title><link href="https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/3langs-one-Jupyter.html" rel="alternate" type="text/html" title="One Jupyter - Three Languages" /><published>2020-09-17T00:00:00-05:00</published><updated>2020-09-17T00:00:00-05:00</updated><id>https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/3langs-one-Jupyter</id><content type="html" xml:base="https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/3langs-one-Jupyter.html">&lt;h1 id=&quot;jupyterlab-for-python-r--julia&quot;&gt;JupyterLab for Python, R &amp;amp; Julia&lt;/h1&gt;
-&lt;p&gt;I use Python for my coding work usually and R occasionally. And I’m currently learning Julia. Spyder (for Python), Juno (for Julia) and RStudio (obviously for R) were my usual editors. But now I use Jupyter for all three languages. So I would like to explain the process of integrating R and Julia into JupyterLab because Python is the default in Jupyter.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://alfasst.github.io/fastblog/feed.xml" rel="self" type="application/atom+xml" /><link href="https://alfasst.github.io/fastblog/" rel="alternate" type="text/html" /><updated>2020-09-16T11:56:29-05:00</updated><id>https://alfasst.github.io/fastblog/feed.xml</id><title type="html">fastposts</title><subtitle>Powered by fastpages</subtitle><entry><title type="html">3langs One Jupyter</title><link href="https://alfasst.github.io/fastblog/2020/09/17/3langs-one-Jupyter.html" rel="alternate" type="text/html" title="3langs One Jupyter" /><published>2020-09-17T00:00:00-05:00</published><updated>2020-09-17T00:00:00-05:00</updated><id>https://alfasst.github.io/fastblog/2020/09/17/3langs-one-Jupyter</id><content type="html" xml:base="https://alfasst.github.io/fastblog/2020/09/17/3langs-one-Jupyter.html"></content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">One Jupyter - Three Languages</title><link href="https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/R-Julia-Jupyter.html" rel="alternate" type="text/html" title="One Jupyter - Three Languages" /><published>2020-09-17T00:00:00-05:00</published><updated>2020-09-17T00:00:00-05:00</updated><id>https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/R-Julia-Jupyter</id><content type="html" xml:base="https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/R-Julia-Jupyter.html">&lt;p&gt;I use Python for my coding work usually and R occasionally. And I’m currently learning Julia. Spyder (for Python), Juno (for Julia) and RStudio (obviously for R) were my usual editors. But now I use Jupyter for all three languages. So I would like to explain the process of integrating R and Julia into JupyterLab because Python is the default in Jupyter.&lt;/p&gt;
 
 &lt;p&gt;I use elementary OS. Thus Python 3 comes pre-installed. Otherwise you have to install Python along with pip and need to add both binaries’ locations to PATH.&lt;/p&gt;
 
 &lt;h2 id=&quot;install-jupyterlab&quot;&gt;Install JupyterLab&lt;/h2&gt;
-&lt;p&gt;JupyterLab can be installed using pip:
+&lt;p&gt;JupyterLab can be installed using pip:&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ pip install jupyterlab&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;If you are using any Gnu/Linux, you may have to run:
+&lt;p&gt;If you are using any Gnu/Linux, you may have to run:&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ sudo pip3 install jupyterlab&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jupyterlab&lt;/code&gt; in terminal/cmd, will open JupyterLab in a browser window.&lt;/p&gt;
@@ -17,22 +16,22 @@
 
 &lt;p&gt;If you are using Ubuntu or any Ubuntu derivatives like elementary OS, there is a better way.&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Add GPG key: 
+  &lt;li&gt;Add GPG key:&lt;br /&gt; 
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Add R repo:
+  &lt;li&gt;Add R repo:&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/'&lt;/code&gt;
 If you are not using bionic (Ubuntu 18.04), change the above code according to your version.&lt;/li&gt;
-  &lt;li&gt;Update repos and install R:
+  &lt;li&gt;Update repos and install R:&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$ sudo apt update &amp;amp;&amp;amp; sudo apt install r-base&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;h3 id=&quot;setting-up-jupyter-for-r&quot;&gt;Setting Up Jupyter for R&lt;/h3&gt;
 &lt;p&gt;Running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R&lt;/code&gt; in terminal/cmd, will open R interactive shell. But if you are using Gnu/Linux, you have to do &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;sudo R&lt;/code&gt; to install packages. Anyway, open R shell. Then:&lt;/p&gt;
 &lt;ol&gt;
-  &lt;li&gt;Install IRkernel:
+  &lt;li&gt;Install IRkernel:&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; install.packages('IRkernel')&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;Make the kernel available to Jupyter
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; IRkernel::installspec(user = FALSE)&lt;/code&gt;
+  &lt;li&gt;Make the kernel available to Jupyter:&lt;br /&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt; IRkernel::installspec(user = FALSE)&lt;/code&gt;&lt;br /&gt;
 Setting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user=TRUE&lt;/code&gt; will limit installation only for the current user.
 After doing these, Jupyter can be used to create R notebooks.&lt;/li&gt;
 &lt;/ol&gt;
@@ -41,9 +40,9 @@ After doing these, Jupyter can be used to create R notebooks.&lt;/li&gt;
 &lt;p&gt;Julia binaries are available at &lt;a href=&quot;https://julialang.org/downloads/&quot;&gt;julialang.org&lt;/a&gt;. For Gnu/Linux, don’t use &lt;em&gt;snap&lt;/em&gt; as it provides older version. Julia shows significant changes over versions. After installation/extraction, add Julia executable to PATH.&lt;/p&gt;
 
 &lt;h3 id=&quot;install--set-up-ijulia&quot;&gt;Install &amp;amp; Set Up IJulia&lt;/h3&gt;
-&lt;p&gt;IJulia provides Jupyter support to Julia. To install IJulia, open Julia by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;julia&lt;/code&gt; in shell. Switch to Pkg mode by hitting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;]&lt;/code&gt;.
+&lt;p&gt;IJulia provides Jupyter support to Julia. To install IJulia, open Julia by typing &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;julia&lt;/code&gt; in shell. Switch to Pkg mode by hitting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;]&lt;/code&gt;.&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(@v1.5) pkg&amp;gt; add IJulia&lt;/code&gt;
-After installation, to make Julia available in Jupyter, build IJulia.
+After installation, to make Julia available in Jupyter, build IJulia.&lt;br /&gt;
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(@v1.5) pkg&amp;gt; build IJulia&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;So Jupyter is ready to use with Python, R and Julia.&lt;/p&gt;
@@ -52,4 +51,4 @@ After installation, to make Julia available in Jupyter, build IJulia.
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://dzone.com/articles/using-r-on-jupyternbspnotebook&quot;&gt;Using R on Jupyter Notebook - DZone Big Data&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.digitalocean.com/community/tutorials/how-to-install-r-on-ubuntu-18-04-quickstart&quot;&gt;How To Install R on Ubuntu 18.04 - Digital Ocean&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><category term="jupyter" /><category term="R" /><category term="julia" /><category term="python" /><summary type="html">JupyterLab for Python, R &amp;amp; Julia I use Python for my coding work usually and R occasionally. And I’m currently learning Julia. Spyder (for Python), Juno (for Julia) and RStudio (obviously for R) were my usual editors. But now I use Jupyter for all three languages. So I would like to explain the process of integrating R and Julia into JupyterLab because Python is the default in Jupyter.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://alfasst.github.io/fastblog/images/092020/notebooks.png" /><media:content medium="image" url="https://alfasst.github.io/fastblog/images/092020/notebooks.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+&lt;/ul&gt;</content><author><name></name></author><category term="jupyter" /><category term="R" /><category term="julia" /><category term="python" /><summary type="html">I use Python for my coding work usually and R occasionally. And I’m currently learning Julia. Spyder (for Python), Juno (for Julia) and RStudio (obviously for R) were my usual editors. But now I use Jupyter for all three languages. So I would like to explain the process of integrating R and Julia into JupyterLab because Python is the default in Jupyter.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://alfasst.github.io/fastblog/images/092020/notebooks.png" /><media:content medium="image" url="https://alfasst.github.io/fastblog/images/092020/notebooks.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

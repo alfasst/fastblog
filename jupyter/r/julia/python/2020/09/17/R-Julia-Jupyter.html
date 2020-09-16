@@ -10,14 +10,14 @@
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="How to setup JupyterLab for Python, R and Julia." />
 <meta property="og:description" content="How to setup JupyterLab for Python, R and Julia." />
-<link rel="canonical" href="https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/3langs-one-Jupyter.html" />
-<meta property="og:url" content="https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/3langs-one-Jupyter.html" />
+<link rel="canonical" href="https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/R-Julia-Jupyter.html" />
+<meta property="og:url" content="https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/R-Julia-Jupyter.html" />
 <meta property="og:site_name" content="fastposts" />
 <meta property="og:image" content="https://alfasst.github.io/fastblog/images/092020/notebooks.png" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-17T00:00:00-05:00" />
 <script type="application/ld+json">
-{"description":"How to setup JupyterLab for Python, R and Julia.","url":"https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/3langs-one-Jupyter.html","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/3langs-one-Jupyter.html"},"headline":"One Jupyter - Three Languages","dateModified":"2020-09-17T00:00:00-05:00","datePublished":"2020-09-17T00:00:00-05:00","image":"https://alfasst.github.io/fastblog/images/092020/notebooks.png","@context":"https://schema.org"}</script>
+{"url":"https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/R-Julia-Jupyter.html","@type":"BlogPosting","headline":"One Jupyter - Three Languages","dateModified":"2020-09-17T00:00:00-05:00","datePublished":"2020-09-17T00:00:00-05:00","image":"https://alfasst.github.io/fastblog/images/092020/notebooks.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://alfasst.github.io/fastblog/jupyter/r/julia/python/2020/09/17/R-Julia-Jupyter.html"},"description":"How to setup JupyterLab for Python, R and Julia.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/fastblog/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://alfasst.github.io/fastblog/feed.xml" title="fastposts" /><link rel="shortcut icon" type="image/x-icon" href="/fastblog/images/favicon.ico"><link href="https://unpkg.com/@primer/css/dist/primer.css" rel="stylesheet" />
 <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
@@ -104,8 +104,6 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul class="section-nav">
-<li class="toc-entry toc-h1"><a href="#jupyterlab-for-python-r--julia">JupyterLab for Python, R &amp; Julia</a>
-<ul>
 <li class="toc-entry toc-h2"><a href="#install-jupyterlab">Install JupyterLab</a></li>
 <li class="toc-entry toc-h2"><a href="#install-r--support-for-jupyter">Install R &amp; Support for Jupyter</a>
 <ul>
@@ -118,20 +116,16 @@ window.onload = wrap_img;
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
-</ul>
-</li>
-</ul><h1 id="jupyterlab-for-python-r--julia">
-<a class="anchor" href="#jupyterlab-for-python-r--julia" aria-hidden="true"><span class="octicon octicon-link"></span></a>JupyterLab for Python, R &amp; Julia</h1>
-<p>I use Python for my coding work usually and R occasionally. And I’m currently learning Julia. Spyder (for Python), Juno (for Julia) and RStudio (obviously for R) were my usual editors. But now I use Jupyter for all three languages. So I would like to explain the process of integrating R and Julia into JupyterLab because Python is the default in Jupyter.</p>
+</ul><p>I use Python for my coding work usually and R occasionally. And I’m currently learning Julia. Spyder (for Python), Juno (for Julia) and RStudio (obviously for R) were my usual editors. But now I use Jupyter for all three languages. So I would like to explain the process of integrating R and Julia into JupyterLab because Python is the default in Jupyter.</p>
 
 <p>I use elementary OS. Thus Python 3 comes pre-installed. Otherwise you have to install Python along with pip and need to add both binaries’ locations to PATH.</p>
 
 <h2 id="install-jupyterlab">
 <a class="anchor" href="#install-jupyterlab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install JupyterLab</h2>
-<p>JupyterLab can be installed using pip:
+<p>JupyterLab can be installed using pip:<br>
 <code class="language-plaintext highlighter-rouge">$ pip install jupyterlab</code></p>
 
-<p>If you are using any Gnu/Linux, you may have to run:
+<p>If you are using any Gnu/Linux, you may have to run:<br>
 <code class="language-plaintext highlighter-rouge">$ sudo pip3 install jupyterlab</code></p>
 
 <p>Running <code class="language-plaintext highlighter-rouge">jupyterlab</code> in terminal/cmd, will open JupyterLab in a browser window.</p>
@@ -142,13 +136,13 @@ window.onload = wrap_img;
 
 <p>If you are using Ubuntu or any Ubuntu derivatives like elementary OS, there is a better way.</p>
 <ol>
-  <li>Add GPG key: 
+  <li>Add GPG key:<br> 
 <code class="language-plaintext highlighter-rouge">$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9</code>
 </li>
-  <li>Add R repo:
+  <li>Add R repo:<br>
 <code class="language-plaintext highlighter-rouge">$ sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu bionic-cran40/'</code>
 If you are not using bionic (Ubuntu 18.04), change the above code according to your version.</li>
-  <li>Update repos and install R:
+  <li>Update repos and install R:<br>
 <code class="language-plaintext highlighter-rouge">$ sudo apt update &amp;&amp; sudo apt install r-base</code>
 </li>
 </ol>
@@ -157,11 +151,11 @@ If you are not using bionic (Ubuntu 18.04), change the above code according to y
 <a class="anchor" href="#setting-up-jupyter-for-r" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting Up Jupyter for R</h3>
 <p>Running <code class="language-plaintext highlighter-rouge">R</code> in terminal/cmd, will open R interactive shell. But if you are using Gnu/Linux, you have to do <code class="language-plaintext highlighter-rouge">sudo R</code> to install packages. Anyway, open R shell. Then:</p>
 <ol>
-  <li>Install IRkernel:
+  <li>Install IRkernel:<br>
 <code class="language-plaintext highlighter-rouge">&gt; install.packages('IRkernel')</code>
 </li>
-  <li>Make the kernel available to Jupyter
-<code class="language-plaintext highlighter-rouge">&gt; IRkernel::installspec(user = FALSE)</code>
+  <li>Make the kernel available to Jupyter:<br>
+<code class="language-plaintext highlighter-rouge">&gt; IRkernel::installspec(user = FALSE)</code><br>
 Setting <code class="language-plaintext highlighter-rouge">user=TRUE</code> will limit installation only for the current user.
 After doing these, Jupyter can be used to create R notebooks.</li>
 </ol>
@@ -172,9 +166,9 @@ After doing these, Jupyter can be used to create R notebooks.</li>
 
 <h3 id="install--set-up-ijulia">
 <a class="anchor" href="#install--set-up-ijulia" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install &amp; Set Up IJulia</h3>
-<p>IJulia provides Jupyter support to Julia. To install IJulia, open Julia by typing <code class="language-plaintext highlighter-rouge">julia</code> in shell. Switch to Pkg mode by hitting <code class="language-plaintext highlighter-rouge">]</code>.
+<p>IJulia provides Jupyter support to Julia. To install IJulia, open Julia by typing <code class="language-plaintext highlighter-rouge">julia</code> in shell. Switch to Pkg mode by hitting <code class="language-plaintext highlighter-rouge">]</code>.<br>
 <code class="language-plaintext highlighter-rouge">(@v1.5) pkg&gt; add IJulia</code>
-After installation, to make Julia available in Jupyter, build IJulia.
+After installation, to make Julia available in Jupyter, build IJulia.<br>
 <code class="language-plaintext highlighter-rouge">(@v1.5) pkg&gt; build IJulia</code></p>
 
 <p>So Jupyter is ready to use with Python, R and Julia.</p>
@@ -194,7 +188,7 @@ After installation, to make Julia available in Jupyter, build IJulia.
         theme="github-light"
         crossorigin="anonymous"
         async>
-</script><a class="u-url" href="/fastblog/jupyter/r/julia/python/2020/09/17/3langs-one-Jupyter.html" hidden></a>
+</script><a class="u-url" href="/fastblog/jupyter/r/julia/python/2020/09/17/R-Julia-Jupyter.html" hidden></a>
 </article>
       </div>
     </main><footer class="site-footer h-card">
