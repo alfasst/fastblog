@@ -118,23 +118,20 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#references">References</a></li>
 </ul><p>I use Python for my coding work usually and R occasionally. And I’m currently learning Julia. Spyder (for Python), Juno (for Julia) and RStudio (obviously for R) were my usual editors. But now I use Jupyter for all three languages. So I would like to explain the process of integrating R and Julia into JupyterLab because Python is the default in Jupyter.</p>
 
-<p>I use elementary OS. Thus Python 3 comes pre-installed. Otherwise you have to install Python along with pip and need to add both binaries’ locations to PATH.</p>
+<p>I use elementary OS. Thus Python 3 comes pre-installed. Otherwise you have to install Python along with pip and need to add both binaries’ locations to PATH. Following things are for Gnu/Linux distributions based on Ubuntu/Debian. Change commands to your system accordingly.</p>
 
 <h2 id="install-jupyterlab">
 <a class="anchor" href="#install-jupyterlab" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install JupyterLab</h2>
 <p>JupyterLab can be installed using pip:<br>
-<code class="language-plaintext highlighter-rouge">$ pip install jupyterlab</code></p>
-
-<p>If you are using any Gnu/Linux, you may have to run:<br>
 <code class="language-plaintext highlighter-rouge">$ sudo pip3 install jupyterlab</code></p>
 
-<p>Running <code class="language-plaintext highlighter-rouge">jupyterlab</code> in terminal/cmd, will open JupyterLab in a browser window.</p>
+<p>Running <code class="language-plaintext highlighter-rouge">jupyterlab</code> in terminal will open JupyterLab in a browser window.</p>
 
 <h2 id="install-r--support-for-jupyter">
 <a class="anchor" href="#install-r--support-for-jupyter" aria-hidden="true"><span class="octicon octicon-link"></span></a>Install R &amp; Support for Jupyter</h2>
 <p>R binaries for Gnu/Linux, Windows &amp; Mac are available at <a href="https://cloud.r-project.org/index.html">CRAN</a>. Download and install R. Add the installation path to PATH if required.</p>
 
-<p>If you are using Ubuntu or any Ubuntu derivatives like elementary OS, there is a better way.</p>
+<p>For Gnu/Linux distros, there is a better way.</p>
 <ol>
   <li>Add GPG key:<br> 
 <code class="language-plaintext highlighter-rouge">$ sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9</code>
@@ -149,7 +146,7 @@ If you are not using bionic (Ubuntu 18.04), change the above code according to y
 
 <h3 id="setting-up-jupyter-for-r">
 <a class="anchor" href="#setting-up-jupyter-for-r" aria-hidden="true"><span class="octicon octicon-link"></span></a>Setting Up Jupyter for R</h3>
-<p>Running <code class="language-plaintext highlighter-rouge">R</code> in terminal/cmd, will open R interactive shell. But if you are using Gnu/Linux, you have to do <code class="language-plaintext highlighter-rouge">sudo R</code> to install packages. Anyway, open R shell. Then:</p>
+<p>Running <code class="language-plaintext highlighter-rouge">R</code> in terminal, will open R interactive shell. But if you are using Gnu/Linux, you have to do <code class="language-plaintext highlighter-rouge">sudo R</code> to install packages. Anyway, open R shell. Then:</p>
 <ol>
   <li>Install IRkernel:<br>
 <code class="language-plaintext highlighter-rouge">&gt; install.packages('IRkernel')</code>
